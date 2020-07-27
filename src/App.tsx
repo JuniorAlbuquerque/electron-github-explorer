@@ -1,18 +1,13 @@
 import React from 'react';
-import {HashRouter, Switch, Route} from 'react-router-dom';
-import './App.css';
-import MainApp from './apps/Main';
-import TrayApp from './apps/Tray';
 
-const App: React.FC = () => {
-  return (
-    <HashRouter>
-      <Switch>
-        <Route path='/tray' component={TrayApp} />
-        <Route path='/' component={MainApp} />
-      </Switch>
-    </HashRouter>
-  );
-}
+import Routes from './routes';
+import GlobalStyles from './styles/GlobalStyles';
+
+const App: React.FC = () => (
+  <>
+    <Routes />
+    <GlobalStyles />
+  </>
+)
 
 export default App;
